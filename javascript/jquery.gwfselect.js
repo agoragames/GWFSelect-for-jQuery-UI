@@ -224,14 +224,22 @@
         options: {
             // None yet...
         },
+        destroy: function () {
+            this.fontList.remove();
+            this.toggle.remove();
+            this.element
+                .removeClass('gwf-input')
+                .removeAttr('readonly')
+                .unbind('click.gwf')
+                .unwrap();
+            $('html').unbind('click.gwf');
+            $.Widget.prototype.destroy.call(this);
+        },
         randomize: function () {
             var fonts = this.fontList.find('li');
             var index = Math.floor(Math.random() * fonts.length);
             var randomFont = $(fonts.get(index));
             this._selectFontListItem(randomFont);
-        },
-        _debug: function (info) {
-            console && console.log(info);
         },
         _create: function () {
             var opt = this.options,
@@ -319,6 +327,7 @@
         },
         _toggleFontList: function (bool) {
             if (bool) {
+                this.wrapper.css({ 'z-index': 999999 });
                 this.fontList.show();
                 this._loadVisibleFonts();
                 var selectedFont = this.fontList.find('li.selected');
@@ -326,6 +335,7 @@
                     this.fontList.scrollTop(selectedFont.position().top);
                 }
             } else {
+                this.wrapper.css({ 'z-index': 'auto' });
                 this.fontList.hide();
             }
         },
@@ -356,16 +366,6 @@
                 loadedFonts[fontName] = true;
             });
             WebFont.load({ google: { families: fontArray } });
-        },
-        destroy: function () {
-            this.fontList.remove();
-            this.element
-                .removeClass('gwf-input')
-                .removeAttr('readonly')
-                .unbind('click.gwf')
-                .unwrap();
-            $('html').unbind('click.gwf');
-            $.Widget.prototype.destroy.call(this);
         }
     });
 })(jQuery);
