@@ -21,9 +21,4 @@ View the index.html file in this repository for an example of the plugin in use.
 Author
 ----------------------------------------------------------------------
 
-© 2012 Jack Letourneau
-
-License
-----------------------------------------------------------------------
-
-[GNU LGPL version 3](http://www.gnu.org/licenses/lgpl-3.0.en.html)
+© 2012 Jack Letourneau. See LICENSE.txt for license info.
