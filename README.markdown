@@ -17,3 +17,8 @@ Example
 ----------------------------------------------------------------------
 
 View the index.html file in this repository for an example of the plugin in use.
+
+Author
+----------------------------------------------------------------------
+
+© 2012 Jack Letourneau
