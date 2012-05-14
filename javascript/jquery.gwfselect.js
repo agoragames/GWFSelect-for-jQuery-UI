@@ -9,7 +9,6 @@
             $.getJSON(fontURL, function (data, status, req) {
                 $.each(data.items, function () { GWFFonts.push(this.family); });
                 $.each(callbacks, function () { this.call(null); });
-                console.log(GWFFonts);
             });
             fetching = true;
         };
