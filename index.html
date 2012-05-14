@@ -3,9 +3,9 @@
   <head>
     <title>Rewriting the jQuery font selection plugin</title>
     <!-- jQuery and jQuery UI plus stylesheet -->
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
-    <link type="text/css" rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/base/jquery-ui.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/base/jquery-ui.css">
     <!-- Google WebFont loader -->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
     <!-- GWFSelect plugin plus stylesheet -->
@@ -20,6 +20,7 @@ $(function () {
     $('#random').button().click(function () {
         $('#gwf').gwfselect('randomize');
     });
+    $('#gwf-ltd').gwfselect({ fonts: ['Amaranth', 'Artifika', 'Averia Libre'] });
 });
     </script>
     <style type="text/css">
@@ -48,5 +49,10 @@ body {
       occaecat cupidatat non proident, sunt in culpa qui officia deserunt
       mollit anim id est laborum.
     </p>
+    <hr>
+    <section>
+      Limited font selection:
+      <input id="gwf-ltd">
+    </section>
   </body>
 </html>
