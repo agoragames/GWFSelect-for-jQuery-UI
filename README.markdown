@@ -11,12 +11,18 @@ Usage
 
 1. Include jQuery, jQuery UI, and the [Google WebFont loader](http://code.google.com/apis/webfonts/docs/webfont_loader.html) on your page.
 2. Create a regular text input to use as the font selector (it may be prefilled with the name of a font).
-3. Invoke `$.gwfselect` on the input.
+3. Invoke `$.gwfselect` on the input. You can call this with no arguments to allow all available Google web fonts to be selected, or pass a config object with a `fonts` array to specify an explicit font list, e.g. `{ fonts: ['Amaranth', 'Artifika', 'Averia Libre'] }`. [View available fonts...](http://www.google.com/webfonts)
 
 Example
 ----------------------------------------------------------------------
 
-View the index.html file in this repository for an example of the plugin in use.
+View the index.html file in this repository for examples of the plugin in use.
+
+Changelog
+----------------------------------------------------------------------
+
+* 2012-01-13 -- Initial public release (no version number).
+* 2012-05-14 -- Version 1.1; lazily loads font list from Google's servers when it is first required by a widget.
 
 Author
 ----------------------------------------------------------------------
