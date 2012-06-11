@@ -91,10 +91,12 @@
             li = $(li).addClass('selected');
             var fontName = li.data('fontName');
             var styles = this._fontNameToStyle(fontName);
-            this.element
-                .val(fontName)
-                .css(styles)
-                .trigger('change');
+            this.element.css(styles);
+            if (this.element.val() != fontName) {
+                this.element
+                    .val(fontName)
+                    .trigger('change');
+            }
             this._trigger('change', null, styles);
             this._loadFonts([fontName]);
             this._toggleFontList(false);
