@@ -27,4 +27,4 @@ Changelog
 Author
 ----------------------------------------------------------------------
 
-© 2012 Jack Letourneau. See LICENSE.txt for license info.
+© 2012-2013 Jack Letourneau. See LICENSE.txt for license info.
